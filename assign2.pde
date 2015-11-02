@@ -62,18 +62,11 @@ void setup () {
 
 void draw() {
   /*CRASH*/
-  if(fighterX-25<=enemyX+25&&enemyX+25<=fighterX+25){
-    if(fighterY-20<=enemyY+25&&enemyY+25<=fighterY+20){
+   if(enemyX-25<=fighterX+20  &&  fighterX+20<=enemyX+55  &&
+         enemyY-25<=fighterY+20  &&  fighterY+20<=enemyY+55){
        enemyX=-65;  enemyY=random(50,height-50);  enemyXSpeed=enemyXSpeed0; 
        hpVolume-=200*20/100;
     }
-  }
-  if(enemyX-25<=fighterX+25&&fighterX+25<=enemyX+25){
-    if(enemyY-20<=fighterY+25&&fighterY+25<=enemyY+20){
-       enemyX=-65;  enemyY=random(50,height-50);  enemyXSpeed=enemyXSpeed0; 
-       hpVolume-=200*20/100;
-    }
-  }
   
   /*HP_STATUS*/
   if(0<hpVolume  &&  hpVolume<200){hpState=NOT_FULL;}
